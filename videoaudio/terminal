@@ -1,0 +1,15 @@
+mkdir youtube-audio-extractor
+cd youtube-audio-extractor
+npm init -y
+npm install express ytdl-core ffmpeg-static @ffmpeg/ffmpeg fluent-ffmpeg cors
+npm install -g vercel
+vercel login
+vercel 
+
+mkdir youtube-audio-test
+cd youtube-audio-test
+npm init -y 
+
+npm install ytdl-core fluent-ffmpeg ffmpeg-static 
+
+node test.js

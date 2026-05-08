@@ -1,0 +1,75 @@
+/////Convert 
+
+
+
+
+
+mkdir -p converted
+
+setopt +o nomatch   # prevents errors if no files match
+
+for f in *.{mkv,mp4,avi,mov,flv,wmv,mpg}; do
+  [ -e "$f" ] || continue   # skip if no files match
+  echo "Converting $f"
+  ffmpeg -i "$f" \
+    -c:v copy \
+    -c:a aac -b:a 192k \
+    -movflags +faststart \
+    "converted/${f%.*}.mp4"
+done
+
+
+///list  all  movies
+
+
+ls *.mp4
+
+
+
+
+
+
+Then  Convert 
+
+
+
+mkdir -p converted
+
+ffmpeg -f concat -safe 0 -i list.txt -c copy \
+"converted/HUNGER GAMES THE BALLAD OF SONGBIRDS.mp4"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
